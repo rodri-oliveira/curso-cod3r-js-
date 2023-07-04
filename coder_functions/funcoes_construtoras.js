@@ -1,0 +1,34 @@
+function Carro(velocidadeMaxima = 200, delta = 5){
+    //atributo privado (let)
+    let velocidadeAtual = 0
+
+    //metodo publico
+    this.acelerar = function (){
+        if (velocidadeAtual + delta <= velocidadeMaxima){
+            velocidadeAtual += delta
+        }else {
+            velocidadeAtual = velocidadeMaxima
+        }
+    }
+    //metodo publico
+    this.getVelocidadeAtual = function () {
+        return velocidadeAtual
+    }
+
+    this.desacelerar = function () {
+        if(velocidadeAtual > 0){
+            velocidadeAtual -= 5
+        }
+    }
+}
+
+const uno = new Carro
+uno.acelerar()
+console.log(uno.getVelocidadeAtual())
+
+const ferrari = new Carro(300, 20)
+ferrari.acelerar()
+console.log(ferrari.getVelocidadeAtual())
+
+ferrari.desacelerar()
+console.log(ferrari.getVelocidadeAtual())
