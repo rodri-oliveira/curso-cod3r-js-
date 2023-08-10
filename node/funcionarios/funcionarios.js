@@ -6,12 +6,13 @@ const mulherChinesa = item => item.genero === 'F'
 const menorSalario = (acc, item) => 
     acc.salario < item.salario ? acc : item
 
-axios.get(url).then(response => {
-    const funcionarios = response.data
-    const func = funcionarios
-        .filter(paisChina)
-        .filter(mulherChinesa)
-        .reduce(menorSalario)
-    console.log(func)
+axios.get(url)
+    .then(response => {
+        const funcionarios = response.data
+        const func = funcionarios
+            .filter(paisChina)
+            .filter(mulherChinesa)
+            .reduce(menorSalario)
+        console.log(func)
 })
 
