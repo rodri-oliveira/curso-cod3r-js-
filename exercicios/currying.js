@@ -1,7 +1,3 @@
-const desc1 = salario => salario * (1 - 0.10)
-const descInss = salario => salario * (1 - 0.05)
-const descFundoGarantia = salario => salario * (1 - 0.15)
-
 // const salarioLiquido = (fn1, fn2, fn3, salario) => {
 //     let resultado = fn1(salario)
 //     resultado = fn2(resultado)
@@ -18,6 +14,10 @@ const descFundoGarantia = salario => salario * (1 - 0.15)
 //         return resultado
 //     }
 // }
+const desc1 = salario => salario * (1 - 0.10)
+const descInss = salario => salario * (1 - 0.05)
+const descFundoGarantia = salario => salario * (1 - 0.15)
+
 
 const salarioLiquido = (...funcoes) => {
     return function(salario){
