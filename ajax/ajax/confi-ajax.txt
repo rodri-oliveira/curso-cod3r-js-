@@ -1,6 +1,19 @@
-Asynchronous JavaScript And XML (AJAX)
+na pasta raiz do projeto:
+-npm init -y -> cria o arquivo packge.json
 
-É uma técnica usada com JavaScript
-Atualiza a página (ou parte dela) sem recarregar (reload)
-Comunica de forma assíncrona com um Servidor Web, ou seja, envia e recebe dados em background
-Usa muito... Callback, Promise, Async/Await
+Em SCRIPS declarar:
+-"scripts": {
+    "start": "nodemon server.js"
+
+declarar dependencias:
+"dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.3",
+    "multer": "1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.17.3"
+  }
+
+rodar -> npm i 
+-insta as dependecias do node
